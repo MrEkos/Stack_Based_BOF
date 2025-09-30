@@ -12,7 +12,8 @@ gdb -q /path/binary_name  # (The starting banner is suppressed for cleaner outpu
 
 By sending an oversized input (A long sequence of characters or numbers), we observed when the instruction pointer EIP was overwritten.
 
-<img width="1277" height="284" alt="image" src="https://github.com/user-attachments/assets/440a8efa-17cc-4169-9f4f-45e58770b2d8" />
+
+<img width="1277" height="284" alt="1" src="https://github.com/user-attachments/assets/ec9d523c-67c1-457c-98dc-30ca928f139f" />
 
 
 
@@ -36,7 +37,9 @@ Now let us examine the register information to verify if our input reached the E
 info registers  # Displays the registers information
 info registers $eip  # Just to display this register information 
 ```
-<img width="1281" height="767" alt="image" src="https://github.com/user-attachments/assets/ac6c62ac-5cff-4c19-ae1c-aea88faeade0" />
+
+<img width="1281" height="767" alt="2" src="https://github.com/user-attachments/assets/bbb50191-18da-4299-9b64-d433b93f14e0" />
+
 
 
 
