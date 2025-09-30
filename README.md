@@ -79,7 +79,8 @@ But first: what is EIP and what is it used for?
 
 CPU registers are high speed memory units built directly into the processor, designed to temporarily store critical data that the CPU is actively using. Their primary function is to speed up computations by providing instant access to the most relevant information, avoiding the need to fetch it from slower RAM. **EIP** is the instruction pointer; it stores the address of the next instruction to be executed.
 
-<img width="1073" height="822" alt="image" src="https://github.com/user-attachments/assets/654b88bb-17e9-40d3-acac-31745543a1c3" />
+<img width="1074" height="823" alt="Screenshot 2025-09-21 174043" src="https://github.com/user-attachments/assets/4b63e66c-b904-425c-a8e3-46cfe22508fc" />
+
 
 Now we know that we are trying to control the program flow so we can tell it which address or instruction must be executed next (where our shellcode starts). Modern operating systems have protections against this vulnerability (e.g., ASLR, DEP, stack canaries).
 
