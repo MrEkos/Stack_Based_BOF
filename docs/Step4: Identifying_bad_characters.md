@@ -32,14 +32,18 @@
 
 ### Function Identification:
 - Use "info functions" to list the program symbols.
-<img width="557" height="649" alt="image" src="https://github.com/user-attachments/assets/3368d66f-5a4d-46d0-800a-7e4449a60e9f" />
+
+<img width="557" height="649" alt="1" src="https://github.com/user-attachments/assets/067952fd-f369-412d-a44f-8d89df88bcf1" />
+
 
 - Disassemble suspicious functions (particularly those handling user input): 'disas function_name'
 
-<img width="795" height="761" alt="image" src="https://github.com/user-attachments/assets/09a3e4ec-f62d-4911-9435-1e3477a7d890" />
+<img width="795" height="761" alt="2" src="https://github.com/user-attachments/assets/d02d7fa1-e029-4381-b14a-bd3717c1ddab" />
 
 
-<img width="786" height="476" alt="image" src="https://github.com/user-attachments/assets/7593efe7-c3cd-4545-82db-2d02035459c2" />
+
+<img width="786" height="476" alt="3" src="https://github.com/user-attachments/assets/67716b1f-ea17-441c-b721-e71c0e4b955f" />
+
 
 ### Bad Character Analysis Methodology
 - Set a breakpoint at the vulnerable function to analyze memory state: 'break function_name'
@@ -67,18 +71,20 @@ run $(python3 -c "import sys; offset = 267; bad = {}; char = bytes(c for c in ra
 
 A- Locate Your Test Sequence: Find where your character sequence lands in memory.
 
-<img width="771" height="627" alt="image" src="https://github.com/user-attachments/assets/c4c3a7de-3702-493a-bd57-2e1b45577d57" />
+<img width="771" height="627" alt="4" src="https://github.com/user-attachments/assets/05212181-59fe-47e6-944d-2e14385f2a78" />
+
 
 
 B.- Compare byte by byte: Verify each character from \x01 to \xff appears in order.
 
-C.- Identify Anomalies: Look for:
+C.- Identify anomalies, look for:
 
  - Missing characters (gaps in sequence)
  - Modified bytes (unexpected values)
  - Truncated sequences (early termination)
 
-<img width="779" height="631" alt="image" src="https://github.com/user-attachments/assets/70be9885-76ec-4ad1-8b42-96bd9b797fb7" />
+<img width="779" height="631" alt="5" src="https://github.com/user-attachments/assets/48adc899-4c47-4ed5-a8da-fe03e3e70bee" />
+
 
 (Expected = 0x09 - Found = 0x00. 0x09 must be included to bad.)
 
