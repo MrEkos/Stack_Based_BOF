@@ -32,5 +32,5 @@ Now we must verify that our shellcode does not contain any bad characters. We wi
 <img width="1032" height="165" alt="4" src="https://github.com/user-attachments/assets/2553727b-fe36-410d-9f76-ecdf7e777d6c" />
 
 
-Our final shellcode, after removing bad characters, is 50 bytes in total. We can repeat now the ***Saving our shellcode bytes on a file*** above in order to re save the bytes of our clean payload inside an archive.
+Our final shellcode, after removing bad characters, is 50 bytes in total. We can repeat now the ***Saving our shellcode bytes on a file*** above in order to re save the bytes of our clean payload inside an archive and use the Exploit_Builder.py on the exploit section to complete our payload  
 
