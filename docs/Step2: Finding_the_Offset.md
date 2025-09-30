@@ -2,7 +2,8 @@
 
 To ensure precision in the process, a unique pattern was generated and provided as input using tools such as pattern_create from the Metasploit framework or cyclic from pwntools:
 
-<img width="1277" height="761" alt="image" src="https://github.com/user-attachments/assets/6f409c2f-c7de-4ca6-8900-8ac11fb45737" />
+<img width="1277" height="761" alt="1" src="https://github.com/user-attachments/assets/10b7f075-e6a3-41af-a7e5-cbb89c524022" />
+
 
 (With GEF / Without GEF)  
 
@@ -16,7 +17,8 @@ When we overwrite EIP for the first time, the number of bytes we utilize defines
 
 We must now supply the program with the pattern as input. 
 
-<img width="1279" height="212" alt="image" src="https://github.com/user-attachments/assets/8764b56e-3c56-4333-aa9f-c7eb53717763" />
+<img width="1279" height="212" alt="2" src="https://github.com/user-attachments/assets/8604b7dd-f0b9-4dd0-869b-c3bdab167a41" />
+
 
 
 
@@ -28,7 +30,8 @@ r $(python3 -c "import sys; sys.stdout.buffer.write(b'pattern')")  # Syntax
 
 This time, when the program crashed we see a different value on the EIP register. 
 
-<img width="1279" height="767" alt="image" src="https://github.com/user-attachments/assets/f4ee6807-7093-41d8-8015-9c93c3da3eaa" />
+<img width="1279" height="767" alt="3" src="https://github.com/user-attachments/assets/0e14edf1-3d3d-40ae-b34c-22a3a75460a8" />
+
 
 
 (With GEF / Without GEF)
@@ -39,7 +42,8 @@ This time, when the program crashed we see a different value on the EIP register
 
 Now, using the pattern_offset tool from metasploit framwework we are going to locate the exact amount of bytes needed to reach EIP with the command displayed on the image below (with gef and without )
 
-<img width="1268" height="110" alt="image" src="https://github.com/user-attachments/assets/b72b33c2-5af1-4206-933b-7c608c754543" />
+<img width="1268" height="110" alt="4" src="https://github.com/user-attachments/assets/572dd4cd-b7fc-4aca-b2af-693750b2ab70" />
+
 
 (With GEF / Without GEF)
 
