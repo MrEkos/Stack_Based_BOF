@@ -11,11 +11,12 @@ We need executable code that, when reached by the CPU, prints the contents of /r
 
 - Looking the template:
 
-<img width="470" height="179" alt="image" src="https://github.com/user-attachments/assets/ae22be09-60b4-4841-a84c-87d6eae89070" />
+<img width="470" height="179" alt="1" src="https://github.com/user-attachments/assets/d525969f-7a4d-4a8a-b189-a6a026c8dd6c" />
 
 - Crafting the payload:
 
-<img width="1035" height="71" alt="image_2025-09-29_013207168 - Editado" src="https://github.com/user-attachments/assets/bf19121c-1183-401b-b953-d6e0d49c3476" />
+<img width="1035" height="71" alt="2" src="https://github.com/user-attachments/assets/1486afb7-e938-43bd-85a1-358ae8d2e58a" />
+
 
 Note: file descriptor 1 is stdout.
 
@@ -23,11 +24,13 @@ Now we must verify that our shellcode does not contain any bad characters. We wi
 
 - Saving our shellcode bytes on a file
 
-<img width="1281" height="73" alt="image_2025-09-29_013815874 - Editado" src="https://github.com/user-attachments/assets/54d0f604-e5fe-4dd5-a7d0-573e53f0cf00" />
+<img width="1281" height="73" alt="3" src="https://github.com/user-attachments/assets/88d32570-07a8-45bf-9371-5e9270e44eab" />
+
 
 - Cleaning and weighing our shellcode with msfvenom:
 
-<img width="1032" height="165" alt="image" src="https://github.com/user-attachments/assets/8abac6cd-97d1-4f4b-bea0-421733b6eb82" />
+<img width="1032" height="165" alt="4" src="https://github.com/user-attachments/assets/2553727b-fe36-410d-9f76-ecdf7e777d6c" />
+
 
 Our final shellcode, after removing bad characters, is 50 bytes in total. We can repeat now the ***Saving our shellcode bytes on a file*** above in order to re save the bytes of our clean payload inside an archive.
 
